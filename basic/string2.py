@@ -69,10 +69,10 @@ def front_back(a, b):
 # what each function returns vs. what it's supposed to return.
 def test(got, expected):
     if got == expected:
-        prefix = ' OK '
+        prefix = ' Pass '
     else:
-        prefix = '  X '
-    print(prefix, repr(got), repr(expected))
+        prefix = '  Not pass '
+    return f'{prefix}, {repr(got)}, {repr(expected)}'
 
 
 # main() calls the above functions with interesting inputs,
