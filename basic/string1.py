@@ -6,14 +6,15 @@
 # Google's Python Class
 # http://code.google.com/edu/languages/google-python-class/
 
-# Basic string exercises
-# Fill in the code for the functions below. main() is already set up
-# to call the functions with a few different inputs,
-# printing 'OK' when each function is correct.
-# The starter code for each function includes a 'return'
-# which is just a placeholder for your code.
-# It's ok if you do not complete all the functions, and there
-# are some additional functions to try in string2.py.
+# Базові вправи з рядками
+# Заповніть код функцій нижче. main() вже налаштовано
+# для виклику функцій з декількома різними вхідними даними,
+# виводячи 'OK', коли кожна функція працює коректно.
+# Початковий код кожної функції включає 'return'
+# який є лише заповнювачем для вашого коду.
+# Нічого страшного, якщо ви не завершите всі функції, і є
+# у string2.py є додаткові функції, які варто спробувати.
+
 
 
 # A. donuts
@@ -23,9 +24,15 @@
 # instead of the actual count.
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
-def donuts(count):
-  # +++your code here+++
-  return
+
+# def donuts(count):
+#   if count < 10:
+#     return f'Number of donuts: {count}'
+#   else:
+#     return 'Number of donuts: many'
+#
+# print(donuts(6))
+# print(donuts(11))
 
 
 # B. both_ends
@@ -33,9 +40,16 @@ def donuts(count):
 # and the last 2 chars of the original string,
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
-def both_ends(s):
-  # +++your code here+++
-  return
+
+# def both_ends(s):
+#   if len(s) <= 2:
+#     return ''
+#   else:
+#     return s[:2] + s[-2:]
+#
+# print(both_ends('spring'))
+# print(both_ends('stomatology'))
+# print(both_ends('ex'))
 
 
 # C. fix_start
@@ -66,47 +80,49 @@ def mix_up(a, b):
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
-def test(got, expected):
-  if got == expected:
-    prefix = ' OK '
-  else:
-    prefix = '  X '
-  print '%s got: %s expected: %s' % (prefix, repr(got), repr(expected))
+
+# def test(got, expected):
+#   if got == expected:
+#     prefix = ' OK '
+#   else:
+#     prefix = '  X '
+#   print '%s got: %s expected: %s' % (prefix, repr(got), repr(expected))
 
 
 # Provided main() calls the above functions with interesting inputs,
 # using test() to check if each result is correct or not.
-def main():
-  print 'donuts'
-  # Each line calls donuts, compares its result to the expected for that call.
-  test(donuts(4), 'Number of donuts: 4')
-  test(donuts(9), 'Number of donuts: 9')
-  test(donuts(10), 'Number of donuts: many')
-  test(donuts(99), 'Number of donuts: many')
 
-  print
-  print 'both_ends'
-  test(both_ends('spring'), 'spng')
-  test(both_ends('Hello'), 'Helo')
-  test(both_ends('a'), '')
-  test(both_ends('xyz'), 'xyyz')
-
-  
-  print
-  print 'fix_start'
-  test(fix_start('babble'), 'ba**le')
-  test(fix_start('aardvark'), 'a*rdv*rk')
-  test(fix_start('google'), 'goo*le')
-  test(fix_start('donut'), 'donut')
-
-  print
-  print 'mix_up'
-  test(mix_up('mix', 'pod'), 'pox mid')
-  test(mix_up('dog', 'dinner'), 'dig donner')
-  test(mix_up('gnash', 'sport'), 'spash gnort')
-  test(mix_up('pezzy', 'firm'), 'fizzy perm')
-
-
-# Standard boilerplate to call the main() function.
-if __name__ == '__main__':
-  main()
+# def main():
+#   print 'donuts'
+#   # Each line calls donuts, compares its result to the expected for that call.
+#   test(donuts(4), 'Number of donuts: 4')
+#   test(donuts(9), 'Number of donuts: 9')
+#   test(donuts(10), 'Number of donuts: many')
+#   test(donuts(99), 'Number of donuts: many')
+#
+#   print
+#   print 'both_ends'
+#   test(both_ends('spring'), 'spng')
+#   test(both_ends('Hello'), 'Helo')
+#   test(both_ends('a'), '')
+#   test(both_ends('xyz'), 'xyyz')
+#
+#
+#   print
+#   print 'fix_start'
+#   test(fix_start('babble'), 'ba**le')
+#   test(fix_start('aardvark'), 'a*rdv*rk')
+#   test(fix_start('google'), 'goo*le')
+#   test(fix_start('donut'), 'donut')
+#
+#   print
+#   print 'mix_up'
+#   test(mix_up('mix', 'pod'), 'pox mid')
+#   test(mix_up('dog', 'dinner'), 'dig donner')
+#   test(mix_up('gnash', 'sport'), 'spash gnort')
+#   test(mix_up('pezzy', 'firm'), 'fizzy perm')
+#
+#
+# # Standard boilerplate to call the main() function.
+# if __name__ == '__main__':
+#   main()
