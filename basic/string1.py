@@ -16,7 +16,6 @@
 # у string2.py є додаткові функції, які варто спробувати.
 
 
-
 # A. donuts
 # Given an int count of a number of donuts, return a string
 # of the form 'Number of donuts: <count>', where <count> is the number
@@ -62,8 +61,10 @@
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
-  # +++your code here+++
-  return
+    return s[0] + s[1:].replace(s[0], '*')
+
+
+print(fix_start('babble'))
 
 
 # D. MixUp
@@ -74,9 +75,11 @@ def fix_start(s):
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
-  # +++your code here+++
-  return
+    return b[:2] + a[2:] + ' ' + a[:2] + b[2:]
 
+
+print(mix_up('mix', 'pod'))
+print(mix_up('dog', 'dinner'))
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
