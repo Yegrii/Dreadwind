@@ -75,10 +75,10 @@ def mix_up(a, b):
 
 def test(got, expected):
     if got == expected:
-        prefix = ' OK '
+        prefix = ' Pass '
     else:
-        prefix = ' X '
-    return prefix, repr(got), repr(expected)
+        prefix = ' Not pass '
+    return f'{prefix}, {repr(got)}, {repr(expected)}'
 
 
 # Provided main() calls the above functions with interesting inputs,
