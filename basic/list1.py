@@ -47,7 +47,6 @@ def front_x(words):
     return sorted(list_1) + sorted(list_2)
 
 
-
 # C. sort_last
 # Given a list of non-empty tuples, return a list sorted in increasing
 # order by the last element in each tuple.
@@ -75,23 +74,21 @@ def main():
     print(test(match_ends(['', 'x', 'xy', 'xyx', 'xx']), 2))
     print(test(match_ends(['aaa', 'be', 'abc', 'hello']), 1))
 
-
     print('front_x')
     print(test(front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa']),
-        ['xaa', 'xzz', 'axx', 'bbb', 'ccc']))
+               ['xaa', 'xzz', 'axx', 'bbb', 'ccc']))
     print(test(front_x(['ccc', 'bbb', 'aaa', 'xcc', 'xaa']),
-        ['xaa', 'xcc', 'aaa', 'bbb', 'ccc']))
+               ['xaa', 'xcc', 'aaa', 'bbb', 'ccc']))
     print(test(front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark']),
-        ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']))
-
+               ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']))
 
     print('sort_last')
     print(test(sort_last([(1, 3), (3, 2), (2, 1)]),
-           [(2, 1), (3, 2), (1, 3)]))
+               [(2, 1), (3, 2), (1, 3)]))
     print(test(sort_last([(2, 3), (1, 2), (3, 1)]),
-           [(3, 1), (1, 2), (2, 3)]))
+               [(3, 1), (1, 2), (2, 3)]))
     print(test(sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)]),
-           [(2, 2), (1, 3), (3, 4, 5), (1, 7)]))
+               [(2, 2), (1, 3), (3, 4, 5), (1, 7)]))
 
 
 if __name__ == '__main__':
